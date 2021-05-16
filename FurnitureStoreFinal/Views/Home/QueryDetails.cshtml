@@ -1,0 +1,45 @@
+﻿@model IEnumerable<FurnitureStoreFinal.Models.Query>
+
+@{ ViewBag.Title = "QueryDetails"; }
+
+<style>
+    * {
+        color: antiquewhite;
+    }
+</style>
+
+<h2>Query Details</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Contact)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Message)
+        </th>
+        <th>Remove</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.Name)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Contact)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Message)
+    </td>
+    <td>
+        @Html.ActionLink("Delete", "Delete", new { id = item.id })
+    </td>
+</tr>}
+
+</table>
+<a href="@Url.Action("WorkingArea","Manage")">Back to Dashboard</a>

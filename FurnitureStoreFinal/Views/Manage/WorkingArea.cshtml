@@ -1,0 +1,37 @@
+﻿
+@{
+    ViewBag.Title = "WorkingArea";
+}
+
+<style>
+    .btn-primary {
+    margin:8px;
+    }
+
+    h1 {
+    color:aliceblue;
+    }
+    </style>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12"><center>
+            <h1>Welcome to the Working Area </h1>
+            <a href="@Url.Action("ClientDetails","Customer")" class="btn btn-primary"> Manage Customer</a>
+            <br />
+
+            <a href="@Url.Action("ProductDetails","Product")" class="btn btn-primary"> Manage Product</a>
+            <br />
+
+            <a href="@Url.Action("RawDetails","RawMaterial")" class="btn btn-primary"> Manage Material</a>
+            <br />
+
+            <a href="@Url.Action("QueryDetails","Home")" class="btn btn-primary"> Manage Customer</a>
+            <br />
+</center>
+
+
+        </div>
+
+    </div>
+
+</div>
